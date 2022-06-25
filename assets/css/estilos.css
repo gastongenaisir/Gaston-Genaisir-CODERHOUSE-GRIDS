@@ -1,0 +1,585 @@
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+/** 
+font-family: 'Russo One', sans-serif; 
+font-family: 'Jomolhari', serif;
+**/
+
+.padre{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 20% 75% 5%;
+    grid-template-areas: "header header header"
+                         "hero   hero   hero"
+                         "footer footer footer";
+    font-family: 'Russo One', sans-serif;
+    background-color: rgba(0, 0, 0, 0.88);
+}
+.hijo{
+    grid-area: header;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    grid-template-columns: auto 400px;
+}
+
+.hijo2{
+    grid-area: hero;
+}
+.hijo3{
+    grid-area: footer;
+}
+.logo{
+    height: 100px;
+    animation: flash;
+    animation-duration: 0.5s;
+}
+
+.navbar{
+    display: flex;
+    list-style: none;
+    font-size: calc(0.5em + 1vw);
+    text-transform: uppercase;
+    color: rgb(255, 255, 255);
+    text-shadow: red 0 -2px;
+}
+nav ul li a{
+    display: grid;
+    margin: 30px;
+    color: aliceblue;
+    justify-content: center;
+}
+
+main{
+    height: 740px;
+    background-color: rgb(34, 9, 9);
+    background-image: url(../img/fondo.webp);
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+.hero{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.redes{
+    display: flex;
+    justify-content: center;
+    flex-direction: row wrap;
+    align-items: center;
+}
+
+.fotoControlRoom{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    border-radius: 40px;
+}
+.fotoPin{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    border-radius: 40px;
+}
+h1{
+    display: flex;
+    flex-flow: row wrap;
+    text-align: center;
+    color: aliceblue;
+    font-family: 'Russo One', sans-serif;
+    font-size: 3rem;
+    text-shadow: red 0 -2px;
+}
+h2{
+    display: flex;
+    flex-flow: row wrap;
+    text-align: center;
+    color: aliceblue;
+    font-family: 'Russo One', sans-serif;
+    font-size: 3rem;
+    text-shadow: red 0 -2px;
+}
+
+#instagram{
+    width: 80px;
+    margin-right: 20px;
+}
+#youtube{
+    width: 122px;
+    margin-right: 20px;
+}
+#whatsapp{
+    width: 82px;
+    border-radius: 10px;
+}
+footer{
+    display: grid;
+    grid-area: footer;
+    justify-content: right;
+    background-color: rgba(0, 0, 0, 0.88);
+    color: aliceblue;
+    width: 100%;
+    position: absolute;
+    bottom:0
+}
+footer p{
+    font-size: 1rem;
+    padding: 12px 30px 0px 0px;
+    text-shadow: red 0 -2px;
+}
+
+/* HOOVER */
+.link a{
+    text-decoration: none;
+    position: relative;
+}
+
+.link a:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background: rgb(255, 30, 30);
+    /*animacion de derecha a izquierda*/
+    transform-origin: center;
+    transform: scaleX(0);
+    transition: transform 0.2s ease-in-out;
+}
+.link a:hover:after {
+    /*animacion de derecha a izquierda*/
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+form.contacto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(165, 42, 42, 0.186);
+    padding: 2% 20%;
+    box-sizing: border-box;
+    margin-top: 60px;
+    margin-left: 9.5%;
+    border-radius: 20px;
+    width: 80%;
+}
+section form input{
+    margin-bottom: 20px;
+    font-family: 'Russo One', sans-serif;
+}
+textarea{
+    min-height: 100px;
+    max-height: 200px;
+    max-width: 100%;
+    font-family: 'Russo One', sans-serif;
+}
+.button{
+    padding: 20px;
+    margin-top: 40px;
+    color: brown;
+    font-weight: bold;
+    background-color:rgba(179, 174, 174, 0.299);
+    color: #fff;
+    background-color: #730000;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+}
+.button:hover{
+    cursor: pointer;
+    background-color: #ff0000
+}
+.button:active{
+    background-color: #422b2b;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+.fotoSala{
+    display: flex;
+    flex-direction: row wrap;
+    border-radius: 40px;
+    width: 700px;
+    margin-left: 20px;
+}
+.fotoTv{
+    display: flex;
+    flex-direction: row wrap;
+    border-radius: 40px;
+    width: 750px;
+    margin-right: 20px;
+}
+.textoEstudio{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 20px;
+}
+.servicios{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 2% 0% 6% 15%
+}
+.listaServicios{
+    display: flex;
+    flex-flow: row wrap;
+    color: aliceblue;
+    font-family: 'Russo One', sans-serif;
+    font-size: 40px;
+    text-shadow: red 0 -2px;
+    width: 50%;
+    margin-left: 35%;
+    margin-bottom: 50px;
+}
+.galeriaTitulo{
+    margin: 2%;
+}
+.equiposTitulo{
+    margin: 2%;
+}
+.container{
+    margin: auto;
+    background-color: rgba(166, 1, 1, 0.292);
+    width: 1000px;
+    padding: 30px;
+}
+ul, li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+ul.slider{
+    position: relative;
+    width: 935px;
+    height: 300px;
+}
+
+ul.slider li {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    opacity: 0;
+    width: inherit;
+    height: inherit;
+    transition: opacity .5s;
+    background:rgba(129, 27, 27, 0.555);
+}
+
+ul.slider li img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+ul.slider li:first-child {
+    opacity: 1; /*Mostramos el primer <li>*/
+}
+
+ul.slider li:target {
+    opacity: 1; /*Mostramos el <li> del enlace que pulsemos*/
+}
+.menu{
+    text-align: center;
+    margin: 20px;
+}
+.menu li{
+    display: inline-block;
+    text-align: center;
+}
+.menu li a{
+    display: inline-block;
+    color: rgb(255, 0, 0);
+    text-decoration: none;
+    background-color: rgba(59, 6, 249, 0.331);
+    margin-top:20px;
+    padding: 10px;
+    width: 10px;
+    height: 10px;
+    font-size: 10px;
+    border-radius: 100%;
+}
+.menu li a:hover{
+    color: rgb(255, 234, 0);
+    text-decoration: none;
+    background-color: rgba(59, 6, 249, 0.569);
+}
+
+#instagram:hover{
+    transform:scale(1.05)
+}
+#youtube:hover{
+    transform:scale(1.05)
+}
+#whatsapp:hover{
+    transform:scale(1.05)
+}
+
+/***********************************************************  MEDIA QUERYS  ********************************************************** */
+/***********************************************************  MEDIA QUERYS  ********************************************************** */
+/***********************************************************  MEDIA QUERYS  ********************************************************** */
+/***********************************************************  MEDIA QUERYS  ********************************************************** */
+/***********************************************************  MEDIA QUERYS  ********************************************************** */
+
+
+
+@media screen and (max-width:1200px) and (min-width:992px){
+    h1{
+        font-size: 1.7rem;
+    }
+    nav ul li a{
+        margin:0px 28px;
+        font-size: 22px
+    }
+    .hero{
+        margin-top: 150px;
+    }
+    .fotoControlRoom{
+        width: 300px;
+        margin-left: 10px;
+    }
+    .fotoPin{
+        width: 300px;
+        margin-right: 10px;
+    }
+    #instagram{
+        width: 70px;
+        margin-right: 20px;
+    }
+    #youtube{
+        width: 92px;
+        margin-right: 20px;
+    }
+    #whatsapp{
+        width: 70px;
+        border-radius: 10px;
+    }
+    .redes{
+        margin-top: 60px;
+    }
+    footer p{
+        display: flex;
+        font-size: 12px;
+        align-items: center;
+    }
+    .fotoSala{
+        width: 350px;
+        margin-left: 0px;
+    }
+    .fotoTv{
+        width: 370px;
+        margin-right: 0px;
+        margin-bottom: 20px;
+    }
+    .textoEstudio{
+        padding: 10px;
+    }
+    h2{
+        font-size: 1.5rem;
+    }
+    .servicios{
+        margin: 50px;
+    }
+    .listaServicios{
+        font-size: 1rem;
+        margin: 100px;
+    }
+    main{
+        height: 79vh;
+    }
+}
+@media screen and (max-width:992px) and (min-width:768px){
+    h1{
+        font-size: 1.5rem;
+    }
+    nav ul li a{
+        margin:0px 28px;
+        font-size: 16px
+    }
+    .hero{
+        margin-top: 150px;
+    }
+    .fotoControlRoom{
+        width: 240px;
+        margin-left: 10px;
+    }
+    .fotoPin{
+        width: 240px;
+        margin-right: 10px;
+    }
+    #instagram{
+        width: 60px;
+        margin-right: 20px;
+    }
+    #youtube{
+        width: 82px;
+        margin-right: 20px;
+    }
+    #whatsapp{
+        width: 60px;
+        border-radius: 10px;
+    }
+    .redes{
+        margin-top: 100px;
+    }
+    footer p{
+        display: flex;
+        font-size: 12px;
+        align-items: center;
+    }
+    .fotoSala{
+        width: 250px;
+        margin-left: 0px;
+    }
+    .fotoTv{
+        width: 270px;
+        margin-right: 0px;
+        margin-bottom: 20px;
+    }
+    h2{
+        font-size: 1rem;
+    }
+    .servicios{
+        margin: 50px;
+    }
+    .listaServicios{
+        font-size: 1rem;
+        margin: 100px;
+    }
+    main{
+        height: 79vh;
+    }
+}
+
+@media screen and (max-width:768px) and (min-width:576px){
+    h1{
+        font-size: 1rem;
+    }
+    nav ul li a{
+        margin:0px 30px;
+        font-size: 8px
+    }
+    .hero{
+        flex-direction: column;
+        margin: 20px;
+    }
+    .fotoControlRoom{
+        width: 240px;
+        margin-bottom: 10px;
+    }
+    .fotoPin{
+        width: 240px;
+        margin-top: 10px;
+    }
+    #instagram{
+        width: 40px;
+        margin-right: 20px;
+    }
+    #youtube{
+        width: 62px;
+        margin-right: 20px;
+    }
+    #whatsapp{
+        width: 42px;
+        border-radius: 10px;
+    }
+    footer p{
+        display: flex;
+        font-size: 10px;
+        align-items: center;
+    }
+    .fotoSala{
+        width: 250px;
+        margin-left: 0px;
+    }
+    .fotoTv{
+        width: 250px;
+        margin-right: 0px;
+        margin-bottom: 20px;
+    }
+    h2{
+        font-size: 1rem;
+    }
+    .servicios{
+        margin: 50px;
+    }
+    .listaServicios{
+        font-size: 1rem;
+        margin: 100px;
+    }
+    main{
+        height: 79vh;
+    }
+}
+@media screen and (max-width:576px) and (min-width:200px){
+    h1{
+        font-size: 1rem;
+        margin: 30px
+    }
+    nav ul li a{
+        margin:5px;
+        font-size: 8px
+    }
+    .hero{
+        flex-direction: column;
+    }
+    .fotoControlRoom{
+        width: 200px;
+    }
+    .fotoPin{
+        width: 200px;
+    }
+    #instagram{
+        width: 40px;
+        margin-right: 20px;
+    }
+    #youtube{
+        width: 62px;
+        margin-right: 20px;
+    }
+    #whatsapp{
+        width: 42px;
+        border-radius: 10px;
+    }
+    footer p{
+        display: flex;
+        font-size: 10px;
+        align-items: center;
+    }
+    .fotoSala{
+        width: 250px;
+        margin-left: 0px;
+    }
+    .fotoTv{
+        width: 250px;
+        margin-right: 0px;
+        margin-bottom: 20px;
+    }
+    h2{
+        font-size: 1rem;
+    }
+    .servicios{
+        margin: 50px;
+    }
+    .listaServicios{
+        font-size: 1rem;
+        margin: 100px;
+    }
+    main{
+        height: 79vh;
+    }
+}
