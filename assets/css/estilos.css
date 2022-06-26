@@ -41,9 +41,8 @@ font-family: 'Jomolhari', serif;
     animation-duration: 0.5s;
 }
 
-.navbar{
+.navBar{
     display: flex;
-    list-style: none;
     font-size: calc(0.5em + 1vw);
     text-transform: uppercase;
     color: rgb(255, 255, 255);
@@ -173,7 +172,7 @@ form.contacto{
     background-color: rgba(165, 42, 42, 0.186);
     padding: 2% 20%;
     box-sizing: border-box;
-    margin-top: 60px;
+    margin-top: 10px;
     margin-left: 9.5%;
     border-radius: 20px;
     width: 80%;
@@ -189,8 +188,8 @@ textarea{
     font-family: 'Russo One', sans-serif;
 }
 .button{
-    padding: 20px;
-    margin-top: 40px;
+    padding: 10px;
+    margin-top: 30px;
     color: brown;
     font-weight: bold;
     background-color:rgba(179, 174, 174, 0.299);
@@ -328,15 +327,11 @@ ul.slider li:target {
 #whatsapp:hover{
     transform:scale(1.05)
 }
-
 /***********************************************************  MEDIA QUERYS  ********************************************************** */
 /***********************************************************  MEDIA QUERYS  ********************************************************** */
 /***********************************************************  MEDIA QUERYS  ********************************************************** */
 /***********************************************************  MEDIA QUERYS  ********************************************************** */
 /***********************************************************  MEDIA QUERYS  ********************************************************** */
-
-
-
 @media screen and (max-width:1200px) and (min-width:992px){
     h1{
         font-size: 1.7rem;
@@ -369,7 +364,7 @@ ul.slider li:target {
         border-radius: 10px;
     }
     .redes{
-        margin-top: 60px;
+        margin-top: 30px;
     }
     footer p{
         display: flex;
@@ -395,11 +390,59 @@ ul.slider li:target {
         margin: 50px;
     }
     .listaServicios{
-        font-size: 1rem;
-        margin: 100px;
+        font-size: 1.5rem;
+        margin: 100px 300px;
     }
     main{
         height: 79vh;
+    }
+    .container{
+        max-width: 750px;
+    }
+    ul.slider{
+        max-width: 70%;
+    }
+    ul.slider li {
+        width: 600px;
+        opacity: 0;
+        transition: opacity .5s;
+        background:rgba(129, 27, 27, 0.555);
+    }
+    ul.slider li img{
+        height: 325px;
+        width: 685px;
+        object-fit:cover;
+    }
+    ul.slider li:first-child {
+        opacity: 1; /*Mostramos el primer <li>*/
+    }
+    ul.slider li:target {
+        opacity: 1; /*Mostramos el <li> del enlace que pulsemos*/
+    }
+    .menu{
+        text-align: center;
+        margin: 20px;
+    }
+    .menu li{
+        display: inline-block;
+        text-align: center;
+    }
+    .menu li a{
+        display: inline-block;
+        color: rgb(255, 0, 0);
+        text-decoration: none;
+        background-color: rgba(59, 6, 249, 0.331);
+        margin-top:20px;
+        padding: 10px;
+        width: 10px;
+        height: 10px;
+        font-size: 10px;
+        border-radius: 100%;
+    }
+    .menu li a:hover{
+        color: rgb(255, 234, 0);
+        text-decoration: none;
+        background-color: rgba(59, 6, 249, 0.569);
     }
 }
 @media screen and (max-width:992px) and (min-width:768px){
@@ -434,7 +477,7 @@ ul.slider li:target {
         border-radius: 10px;
     }
     .redes{
-        margin-top: 100px;
+        margin-top: 40px;
     }
     footer p{
         display: flex;
@@ -461,7 +504,55 @@ ul.slider li:target {
         margin: 100px;
     }
     main{
-        height: 79vh;
+        height: 80vh;
+    }
+    .container{
+        max-width: 550px;
+    }
+    ul.slider{
+        max-width: 70%;
+    }
+    ul.slider li {
+        width: 490px;
+        opacity: 0;
+        transition: opacity .5s;
+        background:rgba(129, 27, 27, 0.555);
+    }
+    ul.slider li img{
+        height: 320px;
+        width: 500px;
+        object-fit:cover;
+    }
+    ul.slider li:first-child {
+        opacity: 1; /*Mostramos el primer <li>*/
+    }
+    ul.slider li:target {
+        opacity: 1; /*Mostramos el <li> del enlace que pulsemos*/
+    }
+    .menu{
+        text-align: center;
+        margin: 20px;
+    }
+    .menu li{
+        display: inline-block;
+        text-align: center;
+    }
+    .menu li a{
+        display: inline-block;
+        color: rgb(255, 0, 0);
+        text-decoration: none;
+        background-color: rgba(59, 6, 249, 0.331);
+        margin-top:20px;
+        padding: 10px;
+        width: 10px;
+        height: 10px;
+        font-size: 10px;
+        border-radius: 100%;
+    }
+    .menu li a:hover{
+        color: rgb(255, 234, 0);
+        text-decoration: none;
+        background-color: rgba(59, 6, 249, 0.569);
     }
 }
 
@@ -524,6 +615,55 @@ ul.slider li:target {
     main{
         height: 79vh;
     }
+    .container{
+        max-width: 550px;
+        margin-bottom: 50px;
+    }
+    ul.slider{
+        max-width: 70%;
+    }
+    ul.slider li {
+        width: 490px;
+        opacity: 0;
+        transition: opacity .5s;
+        background:rgba(129, 27, 27, 0.555);
+    }
+    ul.slider li img{
+        height: 320px;
+        width: 500px;
+        object-fit:cover;
+    }
+    ul.slider li:first-child {
+        opacity: 1; /*Mostramos el primer <li>*/
+    }
+    ul.slider li:target {
+        opacity: 1; /*Mostramos el <li> del enlace que pulsemos*/
+    }
+    .menu{
+        text-align: center;
+        margin: 20px;
+    }
+    .menu li{
+        display: inline-block;
+        text-align: center;
+    }
+    .menu li a{
+        display: inline-block;
+        color: rgb(255, 0, 0);
+        text-decoration: none;
+        background-color: rgba(59, 6, 249, 0.331);
+        margin-top:20px;
+        padding: 10px;
+        width: 10px;
+        height: 10px;
+        font-size: 10px;
+        border-radius: 100%;
+    }
+    .menu li a:hover{
+        color: rgb(255, 234, 0);
+        text-decoration: none;
+        background-color: rgba(59, 6, 249, 0.569);
+    }
 }
 @media screen and (max-width:576px) and (min-width:200px){
     h1{
@@ -581,5 +721,66 @@ ul.slider li:target {
     }
     main{
         height: 79vh;
+    }
+    .container{
+        max-width: 350px;
+    }
+    ul.slider{
+        max-width: 70%;
+    }
+    ul.slider li {
+        width: 300px;
+        opacity: 0;
+        transition: opacity .5s;
+        background:rgba(129, 27, 27, 0.555);
+    }
+    ul.slider li img{
+        height: 300px;
+        width: 300px;
+        object-fit: contain;
+    }
+    ul.slider li:first-child {
+        opacity: 1; /*Mostramos el primer <li>*/
+    }
+    ul.slider li:target {
+        opacity: 1; /*Mostramos el <li> del enlace que pulsemos*/
+    }
+    .menu{
+        text-align: center;
+        margin: 20px;
+    }
+    .menu li{
+        display: inline-block;
+        text-align: center;
+    }
+    .menu li a{
+        display: inline-block;
+        color: rgb(255, 0, 0);
+        text-decoration: none;
+        background-color: rgba(59, 6, 249, 0.331);
+        margin-top:20px;
+        padding: 10px;
+        width: 10px;
+        height: 10px;
+        font-size: 10px;
+        border-radius: 100%;
+    }
+    .menu li a:hover{
+        color: rgb(255, 234, 0);
+        text-decoration: none;
+        background-color: rgba(59, 6, 249, 0.569);
+    }
+}
+
+/* XD */ 
+@media screen and (max-width:1920px) and (min-width:200px){
+    .navbar{
+        display: none;
+    }
+}
+
+@media screen and (max-width:575px) and (min-width:500px){
+    .navbar{
+        display: block;
     }
 }
